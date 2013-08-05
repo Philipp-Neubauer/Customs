@@ -1,0 +1,26 @@
+/home/philipp/Work/Projects/PopR/PopR/exec/call_DPM.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#call_DPM.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/DPM_sampler.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#DPM_sampler.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/define_types.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#define_types.jl#
+/home/philipp/Work/Projects/PopR/Toy data creator.R
+/home/philipp/Work/Projects/PopR/#Toy data creator.R#
+/home/philipp/Work/Projects/PopR/PopR/R/DPM.call.R
+/home/philipp/Work/Projects/PopR/PopR/R/#DPM.call.R#
+/home/philipp/Work/Projects/PopR/PopR/R/get_prior_ab.R
+/home/philipp/Work/Projects/PopR/PopR/R/#get_prior_ab.R#
+/home/philipp/Work/Projects/PopR/PopR/exec/split-merge_fix.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#split-merge_fix.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/split-merge.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#split-merge.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/MM_sampler.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#MM_sampler.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/gibbs_crp_fix.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#gibbs_crp_fix.jl#
+/home/philipp/Work/Projects/PopR/PopR/exec/elink.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#elink.jl#
+/home/philipp/Work/Projects/PopR/PopR/R/MM.call.R
+/home/philipp/Work/Projects/PopR/PopR/R/#MM.call.R#
+/home/philipp/Work/Projects/PopR/PopR/exec/call_MM.jl
+/home/philipp/Work/Projects/PopR/PopR/exec/#call_MM.jl#

@@ -1,0 +1,62 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Aug  2 11:25:30 2013
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/philipp/Work/Projects/PopR/Toy data creator.R"
+  "Toy data creator.R"
+  'ess-mode
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode)
+  226
+  '(190 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "PopR"
+  'dired-mode
+  '(rainbow-delimiters-mode)
+  401
+  '(401 nil)
+  t
+  '("/home/philipp/Work/Projects/PopR/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "PopR"
+  'dired-mode
+  '(rainbow-delimiters-mode)
+  188
+  '(188 nil)
+  t
+  '("/home/philipp/Work/Projects/PopR/PopR/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "exec"
+  'dired-mode
+  '(rainbow-delimiters-mode)
+  196
+  '(145 nil)
+  t
+  '("/home/philipp/Work/Projects/PopR/PopR/exec/")
+  nil)
+
