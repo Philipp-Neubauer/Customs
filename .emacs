@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;hides;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;    Load
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -131,12 +131,22 @@ Ignores CHAR at point."
  '(cua-enable-cua-keys t)
  '(cua-mode t nil (cua-base))
  '(ess-R-font-lock-keywords (quote ((ess-R-fl-keyword:modifiers . t) (ess-R-fl-keyword:fun-defs . t) (ess-R-fl-keyword:keywords . t) (ess-R-fl-keyword:assign-ops . t) (ess-R-fl-keyword:constants . t) (ess-fl-keyword:fun-calls . t) (ess-fl-keyword:numbers . t) (ess-fl-keyword:operators . t) (ess-fl-keyword:delimiters . t) (ess-fl-keyword:= . t) (ess-R-fl-keyword:F&T . t))))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(show-paren-mode t)
+ '(sql-connection-alist nil)
+ '(sql-product (quote postgres)))
 
 ;; (add-to-list 'auto-mode-alist '("\\.Rnw\\'" . Rnw-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.rnw\\'" . Rnw-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.Snw\\'" . Rnw-mode))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;    Desktop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ (require 'desktop)
+(desktop-save-mode 1)
+(desktop-read)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -385,7 +395,7 @@ prompt the user for a coding system."
 ;;   Julia
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq inferior-julia-program-name "~/Deps/julia/usr/bin/julia-release-basic")
+(setq inferior-julia-program-name "~/Deps/julia/usr/bin/julia-basic")
 (add-to-list 'load-path "~/Deps/julia/contrib")
 (require 'julia-mode)
 
@@ -404,7 +414,6 @@ prompt the user for a coding system."
 (setq ess-eval-visibly-p nil) ;otherwise C-c C-r (eval region) takes forever
 (setq ess-ask-for-ess-directory nil) ;otherwise you are prompted each time you start
 
-(setq ess-ask-for-ess-directory nil)
 (setq ess-local-process-name "R")
 (setq ansi-color-for-comint-mode 'filter)
 (setq comint-scroll-to-bottom-on-input t)
@@ -435,7 +444,7 @@ prompt the user for a coding system."
 	     (local-set-key [C-up] 'comint-previous-input)
 	     (local-set-key [C-down] 'comint-next-input)))
 ;; (require 'ess-site)
-(load "~/.emacs.d/elpa/ess-20130711.2359/lisp/ess-site")
+(load "~/Deps/ESS/lisp/ess-site")
 
 (ess-toggle-underscore nil)
 (setq ess-S-assign-key [?\C-=])
@@ -468,12 +477,12 @@ prompt the user for a coding system."
 (define-key comint-mode-map [C-up] 'comint-previous-matching-input-from-input)
 (define-key comint-mode-map [C-down] 'comint-next-matching-input-from-input)
 
-(defun uncomment-region (beg end)
-  (interactive "r")
-  (comment-region beg end -1))
+;(defun uncomment-region (beg end)
+;  (interactive "r")
+ ; (comment-region beg end -1))
 
-(define-key ess-mode-map (kbd "C-d") 'comment-region)
-(define-key ess-mode-map (kbd "C-S-d") 'uncomment-region)
+;(define-key ess-mode-map (kbd "\C-d") 'comment-region)
+;(define-key ess-mode-map (kbd "\C-S-d") 'uncomment-region)
 
 ;; Delete selection when pressing [delete] key
   (delete-selection-mode t)
@@ -531,7 +540,72 @@ prompt the user for a coding system."
 
 (setq org-src-fontify-natively t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Load hideshow and enable for ESS
+(autoload 'hideshowvis-enable "hideshowvis" "Highlight foldable regions")
+(dolist (hook (list 'emacs-lisp-mode-hook
+                  'ess-mode-hook))
+(add-hook hook 'hideshowvis-enable))
+(setq hs-special-modes-alist
+    (cons '(ess-mode "{" "}" "#" nil nil) hs-special-modes-alist))
 
+(define-fringe-bitmap 'hs-marker [0 24 24 126 126 24 24 0])
+
+(defcustom hs-fringe-face 'hs-fringe-face
+  "*Specify face used to highlight the fringe on hidden regions."
+  :type 'face
+  :group 'hideshow)
+
+(defface hs-fringe-face
+  '((t (:foreground "#888" :box (:line-width 2 :color "grey75" :style
+released-button))))
+  "Face used to highlight the fringe on folded regions"
+  :group 'hideshow)
+
+(defcustom hs-face 'hs-face
+  "*Specify the face to to use for the hidden region indicator"
+  :type 'face
+  :group 'hideshow)
+
+(defface hs-face
+  '((t (:background "#ff8" :box t)))
+  "Face to hightlight the ... area of hidden regions"
+  :group 'hideshow)
+
+(defun display-code-line-counts (ov)
+  (when (eq 'code (overlay-get ov 'hs))
+    (let* ((marker-string "*fringe-dummy*")
+           (marker-length (length marker-string))
+           (display-string (format "(%d)..." (count-lines
+(overlay-start ov) (overlay-end ov))))
+           )
+      (overlay-put ov 'help-echo "Hiddent text. C-c,= to show")
+      (put-text-property 0 marker-length 'display (list 'left-fringe
+'hs-marker 'hs-fringe-face) marker-string)
+      (overlay-put ov 'before-string marker-string)
+      (put-text-property 0 (length display-string) 'face 'hs-face
+display-string)
+      (overlay-put ov 'display display-string)
+      )))
+
+(setq hs-set-up-overlay 'display-code-line-counts)
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+; Load hideshow-org (http://github.com/secelis/hideshow-org/tree/master)
+;(require 'hideshow)
+;(require 'hideshow-org)
+;(add-to-list 'hs-special-modes-alist
+ ;           '(ess-mode "{" "}" "/[*/]" nil
+;hs-c-like-adjust-block-beginning))
+;(global-set-key "\C-ch" 'hs-org/minor-mode) ;; toggles hideshow-org
+; (add-hook 'ess-mode-hook 'hs-org/minor-mode) ;; starts for ESS files
+;(add-hook 'ess-mode-hook '(lambda () (hs-org/minor-mode 1)))
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;    buffer-timer

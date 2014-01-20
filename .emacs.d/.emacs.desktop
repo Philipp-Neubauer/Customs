@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Aug  2 11:25:30 2013
+;; Created Tue Jan 21 09:15:30 2014
 ;; Desktop file format version 206
 ;; Emacs version 24.3.1
 
@@ -10,53 +10,229 @@
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring nil)
+(setq search-ring '("Delta" "table" "names" "sid.ta" "coor" "coordinates" "f" "git" "sep" "mv" "clo" "fastin" "rdiric" "require" "MASS" "mvr"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history nil)
+(setq file-name-history '("/home/philipp/dragonfly/paua-metrics/report/sweave/catch_table_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/SA_coverage_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Boat_day_Table.tex" "~/dragonfly/paua-metrics/report/sweave/dive_rec_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/dive_rec_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayyear_fig.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_year.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayear_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Median_depth_qmayear_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayear_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qma.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_year.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayear_tab.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Boat_day_Table.rnw" "/home/philipp/dragonfly/paua-metrics/report/methods.rnw" "/home/philipp/dragonfly/paua-metrics/data/process/Dive_perm_tests.R" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_sito.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_year.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_hist.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qma.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_hist.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_year.rnw" "/home/philipp/dragonfly/paua-metrics/data/process/Metrics_tables_django.R" "/home/philipp/dragonfly/paua-metrics/presentations/SWFG_18-11/Paua_meeting.tex" "/home/philipp/dragonfly/paua-metrics/presentations/PAU7_means_hist.pdf" "~/dragonfly/paua-metrics/data/process/diver_behaviour.R" "/home/philipp/dragonfly/paua-metrics/report/sweave/Diver_behaviour.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/data_issues.rnw" "/home/philipp/dragonfly/paua-metrics/report/sweave/Catch_qma_year_fig.rnw" "~/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_hist.rnw"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/home/philipp/Work/Projects/PopR/Toy data creator.R"
-  "Toy data creator.R"
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Diver_behaviour.rnw"
+  "Diver_behaviour.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  4909
+  '(4909 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/data/process/Inter_annual.R"
+  "Inter_annual.R"
   'ess-mode
-  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode)
-  226
-  '(190 nil)
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  4256
+  '(4256 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_sito.rnw"
+  "Bottom_time_and_depth_sito.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  796
+  '(796 nil)
   nil
-  "PopR"
-  'dired-mode
-  '(rainbow-delimiters-mode)
-  401
-  '(401 nil)
-  t
-  '("/home/philipp/Work/Projects/PopR/")
-  nil)
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search)))
 
 (desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/data/process/diver_behaviour.R"
+  "diver_behaviour.R"
+  'ess-mode
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  1558
+  '(1599 nil)
   nil
-  "PopR"
-  'dired-mode
-  '(rainbow-delimiters-mode)
-  188
-  '(188 nil)
-  t
-  '("/home/philipp/Work/Projects/PopR/PopR/")
-  nil)
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayyear_fig.rnw"
+  "Bottom_time_and_depth_qmayyear_fig.rnw"
+  'ess-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  502
+  '(486 nil)
   nil
-  "exec"
-  'dired-mode
-  '(rainbow-delimiters-mode)
-  196
-  '(145 nil)
-  t
-  '("/home/philipp/Work/Projects/PopR/PopR/exec/")
-  nil)
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/dive_rec_tab.rnw"
+  "dive_rec_tab.rnw"
+  'ess-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  581
+  '(581 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/catch_table_tab.rnw"
+  "catch_table_tab.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  1
+  '(660 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/SA_coverage_tab.rnw"
+  "SA_coverage_tab.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Median_depth_qmayear_tab.rnw"
+  "Median_depth_qmayear_tab.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  478
+  '(478 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_qmayear_tab.rnw"
+  "Bottom_time_and_depth_qmayear_tab.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  473
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/PCELR_comparison.rnw"
+  "PCELR_comparison.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  12082
+  '(18088 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/data/process/Dive_perm_tests.R"
+  "Dive_perm_tests.R"
+  'ess-mode
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  432
+  '(366 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/data/process/Bag_day_dive_table.R"
+  "Bag_day_dive_table.R"
+  'ess-mode
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  616
+  '(115 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 0)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Bottom_time_and_depth_year.rnw"
+  "Bottom_time_and_depth_year.rnw"
+  'ess-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  622
+  '(622 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/Boat_day_Table.rnw"
+  "Boat_day_Table.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  32
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/methods.rnw"
+  "methods.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  1524
+  '(1524 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/data/process/BakerSon.R"
+  "BakerSon.R"
+  'ess-mode
+  '(rainbow-delimiters-mode highlight-indentation-mode eldoc-mode hs-minor-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/sweave/data_issues.rnw"
+  "data_issues.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  393
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/report.tex"
+  "report.tex"
+  'latex-mode
+  '(auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  2635
+  '(346 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
+
+(desktop-create-buffer 206
+  "/home/philipp/dragonfly/paua-metrics/report/results.rnw"
+  "results.rnw"
+  'latex-mode
+  '(ess-noweb-font-lock-mode ess-noweb-mode auto-fill-mode rainbow-delimiters-mode flyspell-mode reftex-mode)
+  271
+  '(271 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search)))
 
